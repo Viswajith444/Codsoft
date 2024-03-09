@@ -3,32 +3,28 @@
 // #include <conio.h>
 
 
+template<typename T>
 class Calculator{
     private:
     
 
     public:
-        template<typename T>
         T add( T a, T b){
             return a + b;
         }
 
-        template<typename T>
         T sub( T a, T b){
             return a - b;
         }
 
-        template<typename T>
         T div( T a, T b){
             return a / b;
         }
 
-        template<typename T>
         T mod( T a, T b){
             return a % b;
         }
 
-        template<typename T>
         T mul( T a, T b){
             return a * b;
         }
@@ -42,6 +38,8 @@ int main(){
     while(true){
 
         printf("\x1b[2J");
+        printf("\x1b[H");
+        // printf("\x1b[uANSISYSRC");
         scanf("%lf %c %lf", &a, &ch, &b);
         getchar();
 
@@ -65,7 +63,7 @@ int main(){
             break;
 
         default:
-            std::cout  << "Shame on u" << std::endl;
+            std::cout  << "Error" << std::endl;
             continue;
         }
 
